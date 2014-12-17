@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04388DA81A416E3500142222 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04388DA61A416E3500142222 /* Crashlytics.framework */; };
+		04388DA91A416E3500142222 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04388DA71A416E3500142222 /* Fabric.framework */; };
 		0438E6851A40E45A000E78D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438E6841A40E45A000E78D8 /* main.m */; };
 		0438E6881A40E45A000E78D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438E6871A40E45A000E78D8 /* AppDelegate.m */; };
 		0438E68B1A40E45A000E78D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0438E68A1A40E45A000E78D8 /* ViewController.m */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04388DA61A416E3500142222 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		04388DA71A416E3500142222 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		0438E67F1A40E45A000E78D8 /* Clean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0438E6831A40E45A000E78D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0438E6841A40E45A000E78D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04388DA81A416E3500142222 /* Crashlytics.framework in Frameworks */,
+				04388DA91A416E3500142222 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		0438E6761A40E45A000E78D8 = {
 			isa = PBXGroup;
 			children = (
+				04388DA61A416E3500142222 /* Crashlytics.framework */,
+				04388DA71A416E3500142222 /* Fabric.framework */,
 				0438E6811A40E45A000E78D8 /* Clean */,
 				0438E69B1A40E45A000E78D8 /* CleanTests */,
 				0438E6801A40E45A000E78D8 /* Products */,
@@ -362,6 +370,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Clean/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -372,6 +384,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Clean/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
