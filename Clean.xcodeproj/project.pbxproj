@@ -129,6 +129,7 @@
 				0438E67B1A40E45A000E78D8 /* Sources */,
 				0438E67C1A40E45A000E78D8 /* Frameworks */,
 				0438E67D1A40E45A000E78D8 /* Resources */,
+				04388DA51A416D5B00142222 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -213,6 +214,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04388DA51A416D5B00142222 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 8a47ccbf8db717681b6ae83cb615504de6fe5eb7 bf71d8eee9d314649b9cf5e1d193477e98fdad9468d1585a9fcf9983c20afd1d";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0438E67B1A40E45A000E78D8 /* Sources */ = {
@@ -414,6 +431,7 @@
 				0438E6A41A40E45A000E78D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0438E6A51A40E45A000E78D8 /* Build configuration list for PBXNativeTarget "CleanTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +440,7 @@
 				0438E6A71A40E45A000E78D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
