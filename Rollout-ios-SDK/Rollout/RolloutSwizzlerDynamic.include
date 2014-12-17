@@ -1,0 +1,592 @@
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static id  _rollout_impl_NSData_dataWithContentsOfURL__Class(id rcv, SEL _cmd, id __rollout_var_url);
+static id (*_rollout_storage_NSData_dataWithContentsOfURL__Class)(id rcv, SEL _cmd, id __rollout_var_url);
+id  _rollout_impl_NSData_dataWithContentsOfURL__Class(id rcv, SEL _cmd, id __rollout_var_url){
+    RolloutTypeWrapper *__rollout_r;
+    NSArray *originalArguments = @[     [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:__rollout_var_url], 
+];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForClassMethod:@"dataWithContentsOfURL:" forClass:@"NSData"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       return _rollout_storage_NSData_dataWithContentsOfURL__Class(rcv, _cmd, __rollout_var_url);
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    NSArray *arguments = inv.tweakedArguments;
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            __rollout_r =         [inv disableReturnValue];
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              inv.originalReturnValue = [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:_rollout_storage_NSData_dataWithContentsOfURL__Class(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue)];
+              __rollout_r =   [inv conditionalReturnValue];
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                __rollout_r = [inv tryCatchReturnValue];
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              inv.originalReturnValue = [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:_rollout_storage_NSData_dataWithContentsOfURL__Class(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue)];;
+              __rollout_r =   [inv conditionalReturnValue];
+            break;
+    }
+    return __rollout_r.objCObjectPointerValue;
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupClassSwizzle:@"dataWithContentsOfURL:" forClass:@"NSData"]){
+  rollout_swizzleClassMethodAndStore(NSClassFromString(@"NSData"), @selector(dataWithContentsOfURL:),(IMP) _rollout_impl_NSData_dataWithContentsOfURL__Class, (IMP*)&_rollout_storage_NSData_dataWithContentsOfURL__Class);
+  [RolloutInvocationsListFactory markClassSwizzle:@"dataWithContentsOfURL:" forClass:@"NSData"];
+}
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static id  _rollout_impl_NSURLConnection_sendSynchronousRequest_returningResponse_error__Class(id rcv, SEL _cmd, id __rollout_var_request, void* __rollout_var_response, void* __rollout_var_error);
+static id (*_rollout_storage_NSURLConnection_sendSynchronousRequest_returningResponse_error__Class)(id rcv, SEL _cmd, id __rollout_var_request, void* __rollout_var_response, void* __rollout_var_error);
+id  _rollout_impl_NSURLConnection_sendSynchronousRequest_returningResponse_error__Class(id rcv, SEL _cmd, id __rollout_var_request, void* __rollout_var_response, void* __rollout_var_error){
+    RolloutTypeWrapper *__rollout_r;
+    NSArray *originalArguments = @[     [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:__rollout_var_request], 
+     [[RolloutTypeWrapper alloc] initWithPointer:__rollout_var_response], 
+     [[RolloutTypeWrapper alloc] initWithPointer:__rollout_var_error], 
+];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForClassMethod:@"sendSynchronousRequest:returningResponse:error:" forClass:@"NSURLConnection"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       return _rollout_storage_NSURLConnection_sendSynchronousRequest_returningResponse_error__Class(rcv, _cmd, __rollout_var_request, __rollout_var_response, __rollout_var_error);
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    NSArray *arguments = inv.tweakedArguments;
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            __rollout_r =         [inv disableReturnValue];
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              inv.originalReturnValue = [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:_rollout_storage_NSURLConnection_sendSynchronousRequest_returningResponse_error__Class(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue, ((RolloutTypeWrapper*)arguments[1]).pointerValue, ((RolloutTypeWrapper*)arguments[2]).pointerValue)];
+              __rollout_r =   [inv conditionalReturnValue];
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                __rollout_r = [inv tryCatchReturnValue];
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              inv.originalReturnValue = [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:_rollout_storage_NSURLConnection_sendSynchronousRequest_returningResponse_error__Class(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue, ((RolloutTypeWrapper*)arguments[1]).pointerValue, ((RolloutTypeWrapper*)arguments[2]).pointerValue)];;
+              __rollout_r =   [inv conditionalReturnValue];
+            break;
+    }
+    return __rollout_r.objCObjectPointerValue;
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupClassSwizzle:@"sendSynchronousRequest:returningResponse:error:" forClass:@"NSURLConnection"]){
+  rollout_swizzleClassMethodAndStore(NSClassFromString(@"NSURLConnection"), @selector(sendSynchronousRequest:returningResponse:error:),(IMP) _rollout_impl_NSURLConnection_sendSynchronousRequest_returningResponse_error__Class, (IMP*)&_rollout_storage_NSURLConnection_sendSynchronousRequest_returningResponse_error__Class);
+  [RolloutInvocationsListFactory markClassSwizzle:@"sendSynchronousRequest:returningResponse:error:" forClass:@"NSURLConnection"];
+}
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static void  _rollout_impl_NSURLConnection_sendAsynchronousRequest_queue_completionHandler__Class(id rcv, SEL _cmd, id __rollout_var_request, id __rollout_var_queue, id __rollout_var_handler);
+static void (*_rollout_storage_NSURLConnection_sendAsynchronousRequest_queue_completionHandler__Class)(id rcv, SEL _cmd, id __rollout_var_request, id __rollout_var_queue, id __rollout_var_handler);
+void  _rollout_impl_NSURLConnection_sendAsynchronousRequest_queue_completionHandler__Class(id rcv, SEL _cmd, id __rollout_var_request, id __rollout_var_queue, id __rollout_var_handler){
+    
+    NSArray *originalArguments = @[     [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:__rollout_var_request], 
+     [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:__rollout_var_queue], 
+     [[RolloutTypeWrapper alloc] initWithBlockPointer:__rollout_var_handler], 
+];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForClassMethod:@"sendAsynchronousRequest:queue:completionHandler:" forClass:@"NSURLConnection"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       _rollout_storage_NSURLConnection_sendAsynchronousRequest_queue_completionHandler__Class(rcv, _cmd, __rollout_var_request, __rollout_var_queue, __rollout_var_handler); return;
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    NSArray *arguments = inv.tweakedArguments;
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              _rollout_storage_NSURLConnection_sendAsynchronousRequest_queue_completionHandler__Class(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue, ((RolloutTypeWrapper*)arguments[1]).objCObjectPointerValue, ((RolloutTypeWrapper*)arguments[2]).blockPointerValue);
+              
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              _rollout_storage_NSURLConnection_sendAsynchronousRequest_queue_completionHandler__Class(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue, ((RolloutTypeWrapper*)arguments[1]).objCObjectPointerValue, ((RolloutTypeWrapper*)arguments[2]).blockPointerValue);;
+              
+            break;
+    }
+    
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupClassSwizzle:@"sendAsynchronousRequest:queue:completionHandler:" forClass:@"NSURLConnection"]){
+  rollout_swizzleClassMethodAndStore(NSClassFromString(@"NSURLConnection"), @selector(sendAsynchronousRequest:queue:completionHandler:),(IMP) _rollout_impl_NSURLConnection_sendAsynchronousRequest_queue_completionHandler__Class, (IMP*)&_rollout_storage_NSURLConnection_sendAsynchronousRequest_queue_completionHandler__Class);
+  [RolloutInvocationsListFactory markClassSwizzle:@"sendAsynchronousRequest:queue:completionHandler:" forClass:@"NSURLConnection"];
+}
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static void  _rollout_impl_ViewController_viewDidLoad_Instance(id rcv, SEL _cmd);
+static void (*_rollout_storage_ViewController_viewDidLoad_Instance)(id rcv, SEL _cmd);
+void  _rollout_impl_ViewController_viewDidLoad_Instance(id rcv, SEL _cmd){
+    
+    NSArray *originalArguments = @[];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForInstanceMethod:@"viewDidLoad" forClass:@"ViewController"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       _rollout_storage_ViewController_viewDidLoad_Instance(rcv, _cmd); return;
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              _rollout_storage_ViewController_viewDidLoad_Instance(rcv, _cmd);
+              
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              _rollout_storage_ViewController_viewDidLoad_Instance(rcv, _cmd);;
+              
+            break;
+    }
+    
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupInstanceSwizzle:@"viewDidLoad" forClass:@"ViewController"]){
+  rollout_swizzleInstanceMethodAndStore(NSClassFromString(@"ViewController"), @selector(viewDidLoad),(IMP) _rollout_impl_ViewController_viewDidLoad_Instance, (IMP*)&_rollout_storage_ViewController_viewDidLoad_Instance);
+  [RolloutInvocationsListFactory markInstanceSwizzle:@"viewDidLoad" forClass:@"ViewController"];
+}
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static void  _rollout_impl_ViewController_didReceiveMemoryWarning_Instance(id rcv, SEL _cmd);
+static void (*_rollout_storage_ViewController_didReceiveMemoryWarning_Instance)(id rcv, SEL _cmd);
+void  _rollout_impl_ViewController_didReceiveMemoryWarning_Instance(id rcv, SEL _cmd){
+    
+    NSArray *originalArguments = @[];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForInstanceMethod:@"didReceiveMemoryWarning" forClass:@"ViewController"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       _rollout_storage_ViewController_didReceiveMemoryWarning_Instance(rcv, _cmd); return;
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              _rollout_storage_ViewController_didReceiveMemoryWarning_Instance(rcv, _cmd);
+              
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              _rollout_storage_ViewController_didReceiveMemoryWarning_Instance(rcv, _cmd);;
+              
+            break;
+    }
+    
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupInstanceSwizzle:@"didReceiveMemoryWarning" forClass:@"ViewController"]){
+  rollout_swizzleInstanceMethodAndStore(NSClassFromString(@"ViewController"), @selector(didReceiveMemoryWarning),(IMP) _rollout_impl_ViewController_didReceiveMemoryWarning_Instance, (IMP*)&_rollout_storage_ViewController_didReceiveMemoryWarning_Instance);
+  [RolloutInvocationsListFactory markInstanceSwizzle:@"didReceiveMemoryWarning" forClass:@"ViewController"];
+}
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static signed char  _rollout_impl_AppDelegate_application_didFinishLaunchingWithOptions__Instance(id rcv, SEL _cmd, id __rollout_var_application, id __rollout_var_launchOptions);
+static signed char (*_rollout_storage_AppDelegate_application_didFinishLaunchingWithOptions__Instance)(id rcv, SEL _cmd, id __rollout_var_application, id __rollout_var_launchOptions);
+signed char  _rollout_impl_AppDelegate_application_didFinishLaunchingWithOptions__Instance(id rcv, SEL _cmd, id __rollout_var_application, id __rollout_var_launchOptions){
+    RolloutTypeWrapper *__rollout_r;
+    NSArray *originalArguments = @[     [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:__rollout_var_application], 
+     [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:__rollout_var_launchOptions], 
+];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForInstanceMethod:@"application:didFinishLaunchingWithOptions:" forClass:@"AppDelegate"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       return _rollout_storage_AppDelegate_application_didFinishLaunchingWithOptions__Instance(rcv, _cmd, __rollout_var_application, __rollout_var_launchOptions);
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    NSArray *arguments = inv.tweakedArguments;
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            __rollout_r =         [inv disableReturnValue];
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              inv.originalReturnValue = [[RolloutTypeWrapper alloc] initWithSChar:_rollout_storage_AppDelegate_application_didFinishLaunchingWithOptions__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue, ((RolloutTypeWrapper*)arguments[1]).objCObjectPointerValue)];
+              __rollout_r =   [inv conditionalReturnValue];
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                __rollout_r = [inv tryCatchReturnValue];
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              inv.originalReturnValue = [[RolloutTypeWrapper alloc] initWithSChar:_rollout_storage_AppDelegate_application_didFinishLaunchingWithOptions__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue, ((RolloutTypeWrapper*)arguments[1]).objCObjectPointerValue)];;
+              __rollout_r =   [inv conditionalReturnValue];
+            break;
+    }
+    return __rollout_r.sCharValue;
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupInstanceSwizzle:@"application:didFinishLaunchingWithOptions:" forClass:@"AppDelegate"]){
+  rollout_swizzleInstanceMethodAndStore(NSClassFromString(@"AppDelegate"), @selector(application:didFinishLaunchingWithOptions:),(IMP) _rollout_impl_AppDelegate_application_didFinishLaunchingWithOptions__Instance, (IMP*)&_rollout_storage_AppDelegate_application_didFinishLaunchingWithOptions__Instance);
+  [RolloutInvocationsListFactory markInstanceSwizzle:@"application:didFinishLaunchingWithOptions:" forClass:@"AppDelegate"];
+}
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static void  _rollout_impl_AppDelegate_applicationWillResignActive__Instance(id rcv, SEL _cmd, id __rollout_var_application);
+static void (*_rollout_storage_AppDelegate_applicationWillResignActive__Instance)(id rcv, SEL _cmd, id __rollout_var_application);
+void  _rollout_impl_AppDelegate_applicationWillResignActive__Instance(id rcv, SEL _cmd, id __rollout_var_application){
+    
+    NSArray *originalArguments = @[     [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:__rollout_var_application], 
+];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForInstanceMethod:@"applicationWillResignActive:" forClass:@"AppDelegate"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       _rollout_storage_AppDelegate_applicationWillResignActive__Instance(rcv, _cmd, __rollout_var_application); return;
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    NSArray *arguments = inv.tweakedArguments;
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              _rollout_storage_AppDelegate_applicationWillResignActive__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue);
+              
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              _rollout_storage_AppDelegate_applicationWillResignActive__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue);;
+              
+            break;
+    }
+    
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupInstanceSwizzle:@"applicationWillResignActive:" forClass:@"AppDelegate"]){
+  rollout_swizzleInstanceMethodAndStore(NSClassFromString(@"AppDelegate"), @selector(applicationWillResignActive:),(IMP) _rollout_impl_AppDelegate_applicationWillResignActive__Instance, (IMP*)&_rollout_storage_AppDelegate_applicationWillResignActive__Instance);
+  [RolloutInvocationsListFactory markInstanceSwizzle:@"applicationWillResignActive:" forClass:@"AppDelegate"];
+}
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static void  _rollout_impl_AppDelegate_applicationDidEnterBackground__Instance(id rcv, SEL _cmd, id __rollout_var_application);
+static void (*_rollout_storage_AppDelegate_applicationDidEnterBackground__Instance)(id rcv, SEL _cmd, id __rollout_var_application);
+void  _rollout_impl_AppDelegate_applicationDidEnterBackground__Instance(id rcv, SEL _cmd, id __rollout_var_application){
+    
+    NSArray *originalArguments = @[     [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:__rollout_var_application], 
+];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForInstanceMethod:@"applicationDidEnterBackground:" forClass:@"AppDelegate"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       _rollout_storage_AppDelegate_applicationDidEnterBackground__Instance(rcv, _cmd, __rollout_var_application); return;
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    NSArray *arguments = inv.tweakedArguments;
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              _rollout_storage_AppDelegate_applicationDidEnterBackground__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue);
+              
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              _rollout_storage_AppDelegate_applicationDidEnterBackground__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue);;
+              
+            break;
+    }
+    
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupInstanceSwizzle:@"applicationDidEnterBackground:" forClass:@"AppDelegate"]){
+  rollout_swizzleInstanceMethodAndStore(NSClassFromString(@"AppDelegate"), @selector(applicationDidEnterBackground:),(IMP) _rollout_impl_AppDelegate_applicationDidEnterBackground__Instance, (IMP*)&_rollout_storage_AppDelegate_applicationDidEnterBackground__Instance);
+  [RolloutInvocationsListFactory markInstanceSwizzle:@"applicationDidEnterBackground:" forClass:@"AppDelegate"];
+}
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static void  _rollout_impl_AppDelegate_applicationWillEnterForeground__Instance(id rcv, SEL _cmd, id __rollout_var_application);
+static void (*_rollout_storage_AppDelegate_applicationWillEnterForeground__Instance)(id rcv, SEL _cmd, id __rollout_var_application);
+void  _rollout_impl_AppDelegate_applicationWillEnterForeground__Instance(id rcv, SEL _cmd, id __rollout_var_application){
+    
+    NSArray *originalArguments = @[     [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:__rollout_var_application], 
+];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForInstanceMethod:@"applicationWillEnterForeground:" forClass:@"AppDelegate"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       _rollout_storage_AppDelegate_applicationWillEnterForeground__Instance(rcv, _cmd, __rollout_var_application); return;
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    NSArray *arguments = inv.tweakedArguments;
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              _rollout_storage_AppDelegate_applicationWillEnterForeground__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue);
+              
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              _rollout_storage_AppDelegate_applicationWillEnterForeground__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue);;
+              
+            break;
+    }
+    
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupInstanceSwizzle:@"applicationWillEnterForeground:" forClass:@"AppDelegate"]){
+  rollout_swizzleInstanceMethodAndStore(NSClassFromString(@"AppDelegate"), @selector(applicationWillEnterForeground:),(IMP) _rollout_impl_AppDelegate_applicationWillEnterForeground__Instance, (IMP*)&_rollout_storage_AppDelegate_applicationWillEnterForeground__Instance);
+  [RolloutInvocationsListFactory markInstanceSwizzle:@"applicationWillEnterForeground:" forClass:@"AppDelegate"];
+}
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static void  _rollout_impl_AppDelegate_applicationDidBecomeActive__Instance(id rcv, SEL _cmd, id __rollout_var_application);
+static void (*_rollout_storage_AppDelegate_applicationDidBecomeActive__Instance)(id rcv, SEL _cmd, id __rollout_var_application);
+void  _rollout_impl_AppDelegate_applicationDidBecomeActive__Instance(id rcv, SEL _cmd, id __rollout_var_application){
+    
+    NSArray *originalArguments = @[     [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:__rollout_var_application], 
+];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForInstanceMethod:@"applicationDidBecomeActive:" forClass:@"AppDelegate"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       _rollout_storage_AppDelegate_applicationDidBecomeActive__Instance(rcv, _cmd, __rollout_var_application); return;
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    NSArray *arguments = inv.tweakedArguments;
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              _rollout_storage_AppDelegate_applicationDidBecomeActive__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue);
+              
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              _rollout_storage_AppDelegate_applicationDidBecomeActive__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue);;
+              
+            break;
+    }
+    
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupInstanceSwizzle:@"applicationDidBecomeActive:" forClass:@"AppDelegate"]){
+  rollout_swizzleInstanceMethodAndStore(NSClassFromString(@"AppDelegate"), @selector(applicationDidBecomeActive:),(IMP) _rollout_impl_AppDelegate_applicationDidBecomeActive__Instance, (IMP*)&_rollout_storage_AppDelegate_applicationDidBecomeActive__Instance);
+  [RolloutInvocationsListFactory markInstanceSwizzle:@"applicationDidBecomeActive:" forClass:@"AppDelegate"];
+}
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static void  _rollout_impl_AppDelegate_applicationWillTerminate__Instance(id rcv, SEL _cmd, id __rollout_var_application);
+static void (*_rollout_storage_AppDelegate_applicationWillTerminate__Instance)(id rcv, SEL _cmd, id __rollout_var_application);
+void  _rollout_impl_AppDelegate_applicationWillTerminate__Instance(id rcv, SEL _cmd, id __rollout_var_application){
+    
+    NSArray *originalArguments = @[     [[RolloutTypeWrapper alloc] initWithObjCObjectPointer:__rollout_var_application], 
+];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForInstanceMethod:@"applicationWillTerminate:" forClass:@"AppDelegate"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       _rollout_storage_AppDelegate_applicationWillTerminate__Instance(rcv, _cmd, __rollout_var_application); return;
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    NSArray *arguments = inv.tweakedArguments;
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              _rollout_storage_AppDelegate_applicationWillTerminate__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue);
+              
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              _rollout_storage_AppDelegate_applicationWillTerminate__Instance(rcv, _cmd, ((RolloutTypeWrapper*)arguments[0]).objCObjectPointerValue);;
+              
+            break;
+    }
+    
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupInstanceSwizzle:@"applicationWillTerminate:" forClass:@"AppDelegate"]){
+  rollout_swizzleInstanceMethodAndStore(NSClassFromString(@"AppDelegate"), @selector(applicationWillTerminate:),(IMP) _rollout_impl_AppDelegate_applicationWillTerminate__Instance, (IMP*)&_rollout_storage_AppDelegate_applicationWillTerminate__Instance);
+  [RolloutInvocationsListFactory markInstanceSwizzle:@"applicationWillTerminate:" forClass:@"AppDelegate"];
+}
+#endif
+
+#ifdef ROLLOUT_SWIZZLE_DEFINITION_AREA
+static void  _rollout_impl_RolloutDynamic_onApplicationStarts_Class(id rcv, SEL _cmd);
+static void (*_rollout_storage_RolloutDynamic_onApplicationStarts_Class)(id rcv, SEL _cmd);
+void  _rollout_impl_RolloutDynamic_onApplicationStarts_Class(id rcv, SEL _cmd){
+    
+    NSArray *originalArguments = @[];
+    RolloutInvocationsList *invocationsList = [RolloutInvocationsListFactory invocationsListForClassMethod:@"onApplicationStarts" forClass:@"RolloutDynamic"];
+    RolloutInvocation *inv = [invocationsList invocationForArguments:originalArguments];
+
+    if(!inv) {
+       _rollout_storage_RolloutDynamic_onApplicationStarts_Class(rcv, _cmd); return;
+    }
+
+    [inv runBefore];
+
+    inv.originalArguments = originalArguments;
+    
+
+    switch ([inv type]) {
+        case RolloutInvocationTypeDisable:
+            
+            break;
+        case RolloutInvocationTypeTryCatch:
+            @try{
+              _rollout_storage_RolloutDynamic_onApplicationStarts_Class(rcv, _cmd);
+              
+            }
+            @catch(id e){
+                [inv runAfterExceptionCaught];
+                
+            }
+            break;
+        case RolloutInvocationTypeNormal:
+        default:
+              _rollout_storage_RolloutDynamic_onApplicationStarts_Class(rcv, _cmd);;
+              
+            break;
+    }
+    
+}
+#endif
+#ifdef ROLLOUT_SWIZZLE_ACT_AREA
+if ([RolloutInvocationsListFactory shouldSetupClassSwizzle:@"onApplicationStarts" forClass:@"RolloutDynamic"]){
+  rollout_swizzleClassMethodAndStore(NSClassFromString(@"RolloutDynamic"), @selector(onApplicationStarts),(IMP) _rollout_impl_RolloutDynamic_onApplicationStarts_Class, (IMP*)&_rollout_storage_RolloutDynamic_onApplicationStarts_Class);
+  [RolloutInvocationsListFactory markClassSwizzle:@"onApplicationStarts" forClass:@"RolloutDynamic"];
+}
+#endif

@@ -1,0 +1,1 @@
+[{"symbol":"RolloutDynamic","kind":"ObjCImplementationDecl","children":[{"symbol":"onApplicationStarts","file":"/Users/maximveksler/Developer/Lab/Clean/Rollout-ios-SDK/Rollout/RolloutDynamic.m","line":27,"is_in_system_header":0,"return":{"file":"(null)","line":0,"is_in_system_header":0,"size":"-2","type":"void","kind":"Void","declared":"Invalid"},"args":[],"kind":"class"}]}]
